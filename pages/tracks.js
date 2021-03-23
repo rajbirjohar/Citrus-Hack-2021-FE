@@ -5,7 +5,7 @@ import { FaLeaf } from "react-icons/fa";
 
 const Track = ({ title, caption, icon }) => {
   return (
-    <div className="flex-1 flex flex-col items-center justify-start px-6 py-10 bg-red-50 border-2 border-red-100 rounded-md space-y-4 w-full shadow-none hover:shadow-2xl transition duration-300 ease-in-out">
+    <div className="flex-1 flex flex-col items-center justify-start px-6 py-10 bg-red-50 border-2 border-red-100 rounded-md space-y-4 w-full shadow-none hover-hover:hover:shadow-2xl transition duration-300 ease-in-out">
       <div>{icon}</div>
       <div className="space-y-4">
         <h1 className="md:text-3xl text-2xl font-semibold text-center text-gray-900">{title}</h1>

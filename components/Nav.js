@@ -1,8 +1,29 @@
 import React, { useState, useEffect } from "react";
 
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import { GiTwirlyFlower } from "react-icons/gi";
+
+const NavLink = ({ title, href }) => {
+  return (
+    <Link
+      activeClass="active"
+      className="link"
+      to={href}
+      spy={true}
+      smooth={true}
+      offset={50}
+      duration={500}
+      delay={0}
+    >
+      <li className="nav-item cursor-pointer">
+        <a className="flex items-center text-md uppercase font-medium py-1 tracking-wide leading-wide text-gray-900 hover:opacity-75">
+          <span>{title}</span>
+        </a>
+      </li>
+    </Link>
+  );
+};
 
 export default function Navbar({ fixed }) {
   const [mounted, setMounted] = useState(false);
@@ -31,7 +52,7 @@ export default function Navbar({ fixed }) {
     <>
       <nav
         className={`sticky-nav relative flex flex-wrap items-center justify-between px-2 py-4 navbar-expand-lg  transition duration-300 ease-in-out ${
-          scroll ? "bg-red-50" : "bg-white"
+          scroll ? "bg-red-100" : "bg-white"
         }`}
       >
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
@@ -54,69 +75,13 @@ export default function Navbar({ fixed }) {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center">
-              <li className="nav-item cursor-pointer">
-                <Link
-                  activeClass="active"
-                  to="hero"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  delay={0}
-                >
-                  <a className="px-3 py-2 flex items-center text-md uppercase font-medium tracking-wide leading-wide text-gray-900 hover:opacity-75">
-                    <span className="ml-2">Home</span>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item cursor-pointer">
-                <Link
-                  activeClass="active"
-                  to="intro"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  delay={0}
-                >
-                  <a className="px-3 py-2 flex items-center text-md uppercase font-medium tracking-wide leading-wide text-gray-900 hover:opacity-75">
-                    <span className="ml-2">About</span>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item cursor-pointer">
-                <Link
-                  activeClass="active"
-                  to="tracks"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  delay={0}
-                >
-                  <a className="px-3 py-2 pr-6 flex items-center text-md uppercase font-medium tracking-wide leading-wide text-gray-900 hover:opacity-75">
-                    <span className="ml-2">Tracks</span>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item cursor-pointer">
-                <Link
-                  activeClass="active"
-                  to="sponsors"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  delay={0}
-                >
-                  <a className="px-3 py-2 pr-6 flex items-center text-md uppercase font-medium tracking-wide leading-wide text-gray-900 hover:opacity-75">
-                    <span className="ml-2">Sponsors</span>
-                  </a>
-                </Link>
-              </li>
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center md:space-x-6 md:space-y-0 space-x-0 space-y-2">
+              <NavLink title="Home" href="hero" />
+              <NavLink title="About" href="intro" />
+              <NavLink title="Tracks" href="tracks" />
+              <NavLink title="Sponsors" href="sponsors" />
               <li className="nav-item">
-                <button class="bg-red-500 hover:bg-red-700 text-white text-md font-medium uppercase tracking-wide py-2 px-4 rounded-md shadow-md">
+                <button class="bg-red-500 hover:bg-red-700 text-white text-md font-medium uppercase tracking-wide py-2 px-4 md:ml-4 ml-0 rounded-md shadow-md">
                   Sign Up
                 </button>
               </li>

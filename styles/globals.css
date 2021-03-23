@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
 @supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
 
 html,
@@ -31,15 +35,41 @@ a {
   z-index: 10 !important;
   top: 0 !important;
 }
-
-.active{
-  border-bottom: 2px solid red;
+.heroimage{
+  background-image: url("../public/assets/citrushack.png");
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  background-position: left;
 }
-.stroke{
+.stroke {
   background-image: url("../public/assets/brushstroke.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-.footershadow{
+.active {
+  border-bottom: 2px solid #000 !important;
+}
+
+.link {
+  border-bottom: 2px solid transparent;
+  color: #000;
+  transition: all 0.2s ease;
+  
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  border-bottom: 2px solid #000 !important;
+  color: #000;
+}
+
+.footershadow {
   box-shadow: 0 50vh 0 50vh #000 !important;
 }
+
+@media (max-width: 768px) { 
+  .heroimage{
+    background-position: top;
+  }
+ }

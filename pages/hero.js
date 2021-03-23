@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Particles from "react-tsparticles";
 import { Link } from "react-scroll";
 
@@ -78,13 +80,13 @@ export default function Hero() {
               },
             },
             shape: {
-                type: "circle",
-            //   type: "image",
-            //   image: {
-            //     src: "/assets/leaf.png",
-            //     width: 200,
-            //     height: 200,
-            //   },
+              type: "circle",
+              //   type: "image",
+              //   image: {
+              //     src: "/assets/leaf.png",
+              //     width: 200,
+              //     height: 200,
+              //   },
             },
             size: {
               random: true,
@@ -94,32 +96,47 @@ export default function Hero() {
           detectRetina: true,
         }}
       />
-      <section className="flex h-screen md:justify-end justify-center items-center">
+      <section className="flex md:flex-row-reverse flex-col h-screen justify-center items-center">
+        <div className="relative w-96 h-96">
+          <Image
+            src="/assets/citrushack.png"
+            alt="Citrus Hack Logo"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+
         <div className=" space-y-4 md:text-right text-center">
-          <h1 className="font-black text-red-900 uppercase tracking-widest md:text-6xl text-5xl">Citrus Hack</h1>
+          <h1 className="font-black text-red-900 uppercase tracking-widest md:text-6xl text-4xl sm:w-full">
+            Citrus Hack
+          </h1>
           <h3 className="font-medium uppercase md:text-lg text-md tracking-wide">
             Founder's Edition
           </h3>
-          <h3 className="font-medium text-gray-900 uppercase md:text-lg text-md tracking-wide">Create your zen.</h3>
-          <h3 className="font-medium text-gray-900 uppercase md:text-lg text-md tracking-wide">04 . 09 . 21</h3>
+          <h3 className="font-medium text-gray-900 uppercase md:text-lg text-md tracking-wide">
+            Create your zen.
+          </h3>
+          <h3 className="font-medium text-gray-900 uppercase md:text-lg text-md tracking-wide">
+            04 . 09 . 21
+          </h3>
           <div className="md:space-x-4 md:space-y-0 space-x-0 space-y-4 flex md:flex-row flex-col">
             <button class="flex-1 bg-red-500 hover:bg-red-700 text-white font-medium uppercase tracking-wide py-2 px-4 rounded-md shadow-md">
               Sign Up
             </button>
-
-            <button class="flex-1 bg-gray-50 hover:bg-gray-100 text-gray-900 font-medium uppercase tracking-wide py-2 px-4 rounded-md shadow-md">
-              <Link
-                activeClass="active"
-                to="intro"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-                delay={0}
-              >
+            <Link
+              activeClass="active"
+              className="flex-1 flex"
+              to="intro"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              delay={0}
+            >
+              <button class="flex-1 bg-gray-50 hover:bg-gray-100 text-gray-900 font-medium uppercase tracking-wide py-2 px-4 rounded-md shadow-md">
                 Learn More
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
       </section>

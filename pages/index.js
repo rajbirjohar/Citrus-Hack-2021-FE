@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container from "../components/Container";
 
-import { Element } from "react-scroll";
+import { Element, animateScroll as scroll } from "react-scroll";
 
 import Hero from "./hero";
 import Intro from "./intro";
@@ -11,7 +11,7 @@ import Sponsors from "./sponsors";
 export default function Home() {
   return (
     <Container main>
-      <div className="flex flex-col justify-center max-w-6xl mx-auto mt-4">
+      <div className="flex flex-col justify-center max-w-6xl mx-auto">
         <Element name="hero" className="section">
           <Hero />
         </Element>

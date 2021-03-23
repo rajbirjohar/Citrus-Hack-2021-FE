@@ -14,7 +14,7 @@ export default function Footer() {
             Like something you see? Let me know.
           </h2>
           <div className="flex flex-col md:flex-row md:space-x-16 md:space-y-0 space-y-2">
-            <div className="flex flex-col space-y-2 mt-2">
+            <div className="flex flex-col space-y-2 pt-2">
               <a
                 className="md:text-lg text-md text-white underline"
                 target="_blank"
