@@ -102,7 +102,7 @@ export default function Hero() {
           </h3>
           <h3 className="font-medium text-gray-900 uppercase md:text-lg text-md tracking-wide">Create your zen.</h3>
           <h3 className="font-medium text-gray-900 uppercase md:text-lg text-md tracking-wide">04 . 09 . 21</h3>
-          <div className="space-x-4 flex">
+          <div className="md:space-x-4 md:space-y-0 space-x-0 space-y-4 flex md:flex-row flex-col">
             <button class="flex-1 bg-red-500 hover:bg-red-700 text-white font-medium uppercase tracking-wide py-2 px-4 rounded-md shadow-md">
               Sign Up
             </button>

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Logo = ({ image, hyper, description }) => {
   return (
     <a href={hyper}>
-      <div className="md:w-56 md:h-56 w-48 h-48 relative items-center justify-center">
+      <div className="md:w-56 md:h-56 w-36 h-36 relative items-center justify-center">
         <Image
           src={image}
           alt={description}
@@ -112,7 +112,7 @@ export default function Sponsors() {
           <h2 className="md:text-xl text-gray-900 text-lg tracking-wide">
             Want to participate but not as a hacker? Come help us create zen.
           </h2>
-          <div className="space-x-4 flex">
+          <div className="md:space-x-4 md:space-y-0 space-x-0 space-y-4 flex md:flex-row flex-col">
             <button class="flex-1 bg-green-300 hover:bg-green-400 text-gray-900 font-medium uppercase tracking-wide py-2 px-4 rounded-md shadow-md">
               Volunteer
             </button>
