@@ -6,12 +6,12 @@ import { Element } from "react-scroll";
 import Hero from "./hero";
 import Intro from "./intro";
 import Tracks from "./tracks";
-import Sponsors from "./sponsors"
+import Sponsors from "./sponsors";
 
 export default function Home() {
   return (
     <Container main>
-      <div className="max-w-6xl mx-auto">
+      <div className="flex flex-col justify-center items-start max-w-6xl mx-auto mt-4">
         <Element name="hero" className="section">
           <Hero />
         </Element>
