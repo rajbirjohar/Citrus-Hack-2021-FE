@@ -96,17 +96,19 @@ export default function Hero() {
           detectRetina: true,
         }}
       />
-      <section className="flex md:flex-row-reverse flex-col h-screen justify-center items-center">
-        <div className="relative md:w-96 md:h-96 w-80 h-80">
-          <Image
-            src="/assets/citrushack.png"
-            alt="Citrus Hack Logo"
-            layout="fill"
-            objectFit="contain"
-          />
+      <section className="max-w-5xl flex md:flex-row-reverse flex-col h-screen justify-center mx-auto items-center">
+        <div className="md:flex-1">
+          <div className="relative md:w-96 md:h-96 w-72 h-72">
+            <Image
+              src="/assets/citrushack.png"
+              alt="Citrus Hack Logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
         </div>
-
-        <div className=" space-y-4 md:text-right text-center">
+        <div className="md:border-r-2 border-red-900 md:h-80"></div>
+        <div className="md:flex-1 space-y-4 md:text-right text-center mr-10">
           <h1 className="font-black text-red-900 uppercase tracking-widest md:text-6xl text-4xl sm:w-full">
             Citrus Hack
           </h1>
@@ -119,13 +121,13 @@ export default function Hero() {
           <h3 className="font-medium text-gray-900 uppercase md:text-lg text-md tracking-wide">
             04 . 09 . 21
           </h3>
-          <div className="md:space-x-4 md:space-y-0 space-x-0 space-y-4 flex md:flex-row flex-col">
+          <div className="md:space-x-4 md:space-y-0 space-x-0 space-y-4 flex md:flex-row flex-col justify-end">
             <button class="flex-1 bg-red-500 hover:bg-red-700 text-white font-medium uppercase tracking-wide py-2 px-4 rounded-md shadow-md">
               Sign Up
             </button>
             <Link
               activeClass="active"
-              className="flex-1 flex"
+              className="flex flex-1"
               to="intro"
               spy={true}
               smooth={true}

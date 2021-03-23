@@ -1,17 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="w-full px-6 py-10 bg-black flex items-center justify-center">
+    <footer className="w-full px-6 py-10 bg-black flex items-center justify-center footershadow">
       <div className="flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-x-0 space-y-4 max-w-4xl">
         <div className="flex-1">
           <h1 className="font-bold md:text-lg text-md text-white">Elsewhere</h1>
           <h2 className="font-md md:text-lg text-md text-white">
+          Like something you see? Let me know.
+          <br />
             Written by{" "}
             <a href="https://rajbirjohar.com" className="underline">
               Rajbir Johar
             </a>
             .
-            <br />
-            Like something you see? Let me know.
           </h2>
           <div className="flex flex-col md:flex-row md:space-x-16 md:space-y-0 space-y-2">
             <div className="flex flex-col space-y-2 pt-2">

@@ -120,7 +120,7 @@ export default function Sponsors() {
               Mentor
             </button>
             <button class="flex-1 bg-pink-200 hover:bg-pink-300 text-gray-900 font-medium uppercase tracking-wide py-2 px-4 rounded-md shadow-md">
-              Sponsors
+              Sponsor
             </button>
           </div>
         </div>

@@ -17,7 +17,7 @@ const NavLink = ({ title, href }) => {
       delay={0}
     >
       <li className="nav-item cursor-pointer">
-        <a className="flex items-center text-md uppercase font-medium py-1 tracking-wide leading-wide text-gray-900 hover:opacity-75">
+        <a className="flex items-center text-md uppercase font-medium py-1 tracking-wide leading-wide text-gray-900 hover:text-red-900">
           <span>{title}</span>
         </a>
       </li>
@@ -52,13 +52,13 @@ export default function Navbar({ fixed }) {
     <>
       <nav
         className={`sticky-nav relative flex flex-wrap items-center justify-between px-2 py-4 navbar-expand-lg  transition duration-300 ease-in-out ${
-          scroll ? "bg-red-100" : "bg-white"
+          scroll ? "bg-red-50" : "bg-white"
         }`}
       >
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a className="text-md font-bold tracking-wider leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-gray-900">
-              Citrus Hack FE
+              Citrus Hack <span className="font-normal">FE</span>
             </a>
             <button
               className="text-gray-900 cursor-pointer text-xl leading-none px-2 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
