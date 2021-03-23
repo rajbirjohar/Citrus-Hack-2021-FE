@@ -11,7 +11,7 @@ import Sponsors from "./sponsors";
 export default function Home() {
   return (
     <Container main>
-      <div className="flex flex-col justify-center items-start max-w-6xl mx-auto mt-4">
+      <div className="flex flex-col justify-center max-w-6xl mx-auto mt-4">
         <Element name="hero" className="section">
           <Hero />
         </Element>

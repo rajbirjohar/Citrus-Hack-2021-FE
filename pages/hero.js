@@ -96,7 +96,7 @@ export default function Hero() {
       />
       <section className="flex h-screen md:justify-end justify-center items-center">
         <div className=" space-y-4 md:text-right text-center">
-          <h1 className="font-black text-red-900 uppercase tracking-widest md:text-6xl text-4xl">Citrus Hack</h1>
+          <h1 className="font-black text-red-900 uppercase tracking-widest md:text-6xl text-5xl">Citrus Hack</h1>
           <h3 className="font-medium uppercase md:text-lg text-md tracking-wide">
             Founder's Edition
           </h3>
