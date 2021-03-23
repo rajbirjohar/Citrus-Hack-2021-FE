@@ -5,7 +5,7 @@ export default function Container({ children, main }) {
   return (
     <>
       <Nav />
-      <div className="flex flex-col items-center justify-center mx-auto px-6 max-w-6xl">
+      <div className="flex flex-col justify-center px-6">
         {children}
       </div>
       <Footer />

@@ -11,7 +11,7 @@ import Sponsors from "./sponsors"
 export default function Home() {
   return (
     <Container main>
-      <div>
+      <div className="max-w-6xl mx-auto">
         <Element name="hero" className="section">
           <Hero />
         </Element>
