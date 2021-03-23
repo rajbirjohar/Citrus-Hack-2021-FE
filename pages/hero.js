@@ -97,7 +97,7 @@ export default function Hero() {
         }}
       />
       <section className="flex md:flex-row-reverse flex-col h-screen justify-center items-center">
-        <div className="relative w-96 h-96">
+        <div className="relative md:w-96 md:h-96 w-80 h-80">
           <Image
             src="/assets/citrushack.png"
             alt="Citrus Hack Logo"
