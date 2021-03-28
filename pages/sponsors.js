@@ -94,7 +94,7 @@ export default function Sponsors() {
               hyper="https://www.amazon.com"
             />
           </div>
-          <h2 className="md:text-xl text-gray-900 text-lg mb-24">
+          <h2 className="md:text-xl text-gray-900 text-lg">
             These logos belong to the original companies that sponsored{" "}
             <Link href="https://citrushack.com">
               <a className="underline">Citrus Hack 2021</a>

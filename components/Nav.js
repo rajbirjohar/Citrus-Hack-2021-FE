@@ -12,7 +12,7 @@ const NavLink = ({ title, href }) => {
       to={href}
       spy={true}
       smooth={true}
-      offset={50}
+      offset={0}
       duration={500}
       delay={0}
     >
@@ -51,7 +51,7 @@ export default function Navbar({ fixed }) {
   return (
     <>
       <nav
-        className={`sticky-nav relative flex flex-wrap items-center justify-between px-2 py-4 navbar-expand-lg  transition duration-300 ease-in-out ${
+        className={`sticky-nav fixed px-2 py-4 transition duration-300 ease-in-out ${
           scroll ? "bg-red-50" : "bg-white"
         }`}
       >
@@ -71,7 +71,7 @@ export default function Navbar({ fixed }) {
           <div
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex justify-center" : " hidden")
+              (navbarOpen ? "flex justify-center" : " hidden")
             }
             id="example-navbar-danger"
           >
